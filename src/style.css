@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f6f2ea;
+  color: #152033;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(201, 166, 107, 0.22), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.11), transparent 36%),
+    linear-gradient(135deg, #f8f4ec 0%, #ffffff 48%, #edf2f7 100%);
+}
+
+.topbar {
+  width: 92%;
+  max-width: 1240px;
+  height: 78px;
+  margin: 22px auto 0;
+  padding: 0 28px;
+  position: sticky;
+  top: 18px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 18px 50px rgba(21, 32, 51, 0.08);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  color: #152033;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 28px;
+}
+
+.topbar nav a {
+  color: #5d6878;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.topbar nav a:hover {
+  color: #b48742;
+}
+
+.resumeBtn {
+  background: #152033;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+}
+
+.hero {
+  width: 92%;
+  max-width: 1240px;
+  margin: 60px auto 0;
+  min-height: calc(100vh - 130px);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.pill,
+.sectionLabel {
+  display: inline-block;
+  background: #fff7e8;
+  color: #9a6a25;
+  border: 1px solid rgba(180, 135, 66, 0.22);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  color: #152033;
+  margin-bottom: 28px;
+}
+
+.hero h1 strong {
+  color: #b48742;
+  font-weight: 900;
+}
+
+.heroContent p {
+  max-width: 670px;
+  color: #5d6878;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.actionRow {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mainBtn,
+.whatsappBtn {
+  padding: 16px 24px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  transition: 0.25s;
+}
+
+.mainBtn {
+  background: #152033;
+  color: white;
+  box-shadow: 0 16px 34px rgba(21, 32, 51, 0.18);
+}
+
+.whatsappBtn {
+  background: #e9f8ef;
+  color: #168442;
+  border: 1px solid rgba(22, 132, 66, 0.16);
+}
+
+.mainBtn:hover,
+.whatsappBtn:hover {
+  transform: translateY(-4px);
+}
+
+.contactMini {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.contactMini a {
+  background: white;
+  color: #334155;
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  padding: 12px 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+}
+
+.photoArea {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 28px;
+}
+
+.photoBackShape {
+  position: absolute;
+  width: 82%;
+  height: 88%;
+  background: #152033;
+  border-radius: 46px;
+  transform: rotate(-5deg);
+  top: 44px;
+  box-shadow: 0 30px 80px rgba(21, 32, 51, 0.2);
+}
+
+.photoFrame {
+  width: min(430px, 100%);
+  height: 560px;
+  background: #ffffff;
+  border: 12px solid white;
+  border-radius: 42px;
+  overflow: hidden;
+  box-shadow: 0 35px 90px rgba(21, 32, 51, 0.18);
+  transform: rotate(3deg);
+  position: relative;
+  z-index: 2;
+}
+
+.photoFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.section {
+  width: 92%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 95px 0;
+}
+
+.section h2,
+.contactPanel h2 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -2px;
+  color: #152033;
+  margin-bottom: 28px;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.aboutGrid p,
+.contactPanel p,
+.projectHeader p {
+  color: #5d6878;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.skillLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.skillBox {
+  background: white;
+  padding: 30px;
+  border-radius: 28px;
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  box-shadow: 0 20px 55px rgba(21, 32, 51, 0.06);
+  transition: 0.25s;
+}
+
+.skillBox:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 75px rgba(180, 135, 66, 0.14);
+}
+
+.skillBox svg {
+  color: #b48742;
+  margin-bottom: 20px;
+}
+
+.skillBox h3 {
+  font-size: 21px;
+  color: #152033;
+  margin-bottom: 12px;
+}
+
+.skillBox p {
+  color: #5d6878;
+  line-height: 1.7;
+}
+
+.projectHeader {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+
+.projectShowcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.projectCard {
+  background: white;
+  border-radius: 32px;
+  padding: 30px;
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  box-shadow: 0 22px 60px rgba(21, 32, 51, 0.07);
+  transition: 0.25s;
+  min-height: 330px;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(180, 135, 66, 0.16);
+}
+
+.projectTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.projectIcon {
+  width: 54px;
+  height: 54px;
+  background: #fff7e8;
+  color: #b48742;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+}
+
+.projectNo {
+  font-size: 34px;
+  font-weight: 900;
+  color: #e7d6b9;
+}
+
+.projectCategory {
+  color: #b48742;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.projectCard h3 {
+  color: #152033;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.projectDesc {
+  color: #5d6878;
+  line-height: 1.75;
+}
+
+.techTags {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.techTags span {
+  background: #f5f0e7;
+  color: #152033;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline div {
+  background: white;
+  padding: 28px;
+  border-left: 6px solid #b48742;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(21, 32, 51, 0.06);
+}
+
+.timeline h3 {
+  color: #152033;
+  margin-bottom: 8px;
+}
+
+.timeline p {
+  color: #5d6878;
+}
+
+.contactPanel {
+  width: 92%;
+  max-width: 1240px;
+  margin: 40px auto 80px;
+  padding: 55px;
+  border-radius: 34px;
+  background: #152033;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.contactPanel h2 {
+  color: white;
+}
+
+.contactPanel .sectionLabel {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f2d7a2;
+  border-color: rgba(242, 215, 162, 0.22);
+}
+
+.contactPanel p {
+  color: #c7ced8;
+}
+
+.contactLinks {
+  display: grid;
+  gap: 14px;
+}
+
+.contactLinks a {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 18px;
+  border-radius: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.contactLinks a:hover {
+  background: #b48742;
+}
+
+.contactLinks small {
+  display: block;
+  color: #d8dee7;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+footer {
+  width: 92%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 35px 0;
+  color: #5d6878;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(21, 32, 51, 0.12);
+}
+
+@media (max-width: 980px) {
+  .topbar nav {
+    display: none;
+  }
+
+  .hero,
+  .aboutGrid,
+  .projectHeader,
+  .contactPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .skillLayout,
+  .projectShowcase {
+    grid-template-columns: 1fr;
+  }
+
+  .photoFrame {
+    height: 480px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
