@@ -139,7 +139,7 @@ function App() {
         <section id="about" className="section aboutGrid">
           <div>
             <span className="sectionLabel">About</span>
-            <h2>Professional Profile</h2>
+            <h2>Who I Am</h2>
           </div>
 
           <p>
